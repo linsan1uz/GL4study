@@ -1,11 +1,10 @@
 #include "GLUtils.h"
 #include "LogUtil.h"
 #include <stdlib.h>
-
 GLuint GLUtils::LoadShader(GLenum shaderType, const char *pSource)
 {
     GLuint shader = 0;
-	FUN_BEGIN_TIME("GLUtils::LoadShader")
+    FUN_BEGIN_TIME("GLUtils::LoadShader")
         shader = glCreateShader(shaderType);
         if (shader)
         {
@@ -31,8 +30,8 @@ GLuint GLUtils::LoadShader(GLenum shaderType, const char *pSource)
                 }
             }
         }
-	FUN_END_TIME("GLUtils::LoadShader")
-	return shader;
+    FUN_END_TIME("GLUtils::LoadShader")
+    return shader;
 }
 
 GLuint GLUtils::CreateProgram(const char *pVertexShaderSource, const char *pFragShaderSource, GLuint &vertexShaderHandle, GLuint &fragShaderHandle)
@@ -82,7 +81,7 @@ GLuint GLUtils::CreateProgram(const char *pVertexShaderSource, const char *pFrag
         }
     FUN_END_TIME("GLUtils::CreateProgram")
     LOGCATE("GLUtils::CreateProgram program = %d", program);
-	return program;
+    return program;
 }
 
 void GLUtils::DeleteProgram(GLuint &program)
@@ -104,3 +103,4 @@ void GLUtils::CheckGLError(const char *pGLOperation)
     }
 
 }
+

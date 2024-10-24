@@ -23,7 +23,7 @@ public:
 
     }
 
-    //virtual void LoadImage(NativeImage *pImage) = 0;
+    virtual void LoadImage(NativeImage *pImage) = 0;
 
     virtual void Init() = 0;
     virtual void Draw() = 0;

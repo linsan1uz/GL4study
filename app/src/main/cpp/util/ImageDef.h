@@ -1,3 +1,6 @@
+//
+// Created by ByteFlow on 2019/7/10.
+//
 
 #ifndef NDK_OPENGLES_3_0_IMAGEDEF_H
 #define NDK_OPENGLES_3_0_IMAGEDEF_H
@@ -109,4 +112,4 @@ public:
 };
 
 
-#endif
+#endif //NDK_OPENGLES_3_0_IMAGEDEF_H

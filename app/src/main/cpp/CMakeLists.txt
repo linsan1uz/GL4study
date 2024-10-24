@@ -29,9 +29,11 @@ include_directories(
 # for GameActivity/NativeActivity derived applications, the same library name must be
 # used in the AndroidManifest.xml file.
 add_library(native-render SHARED
+        JniImpl.cpp
         render/MyGLRenderContext.cpp
         util/GLUtils.cpp
         sample/TriangleSample.cpp
+        sample/TextureSample.cpp
 )
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this

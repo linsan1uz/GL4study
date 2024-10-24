@@ -6,19 +6,18 @@
 #define GL4STUDY_MYGLRENDERCONTEXT_H
 
 
-#include <stdint.h>
-#include "../sample/GLSampleBase.h"
+#include "stdint.h"
+#include <GLES3/gl3.h>
+#include "TextureSample.h"
+#include "TriangleSample.h"
 
-class MyGLRenderContext {
-    //构造函数
-
+class MyGLRenderContext
+{
     MyGLRenderContext();
 
-    //析构函数
-
     ~MyGLRenderContext();
-public:
 
+public:
     void SetImageData(int format, int width, int height, uint8_t *pData);
 
     void SetParamsInt(int paramType, int value);
@@ -31,9 +30,11 @@ public:
 
     static MyGLRenderContext* GetInstance();
     static void DestroyInstance();
+
 private:
     static MyGLRenderContext *m_pContext;
     GLSampleBase *m_Sample;
+
 };
 
 
