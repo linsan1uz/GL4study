@@ -6,11 +6,15 @@
 #include <TriangleSample.h>
 #include "LogUtil.h"
 #include "TextureSample.h"
+#include "NV21Sample.h"
+#include "VaoSample.h"
 
 MyGLRenderContext* MyGLRenderContext::m_pContext = nullptr;
 const int SAMPLE_TYPE  =   200;
 const int SAMPLE_TYPE_KEY_TRIANGLE = 0;
 const int SAMPLE_TYPE_KEY_TEXTURE_MAP = 1;
+const int SAMPLE_TYPE_KEY_YUV_TEXTURE_MAP = 2;
+const int SAMPLE_TYPE_KEY_VAO             = 3;
 
 MyGLRenderContext::MyGLRenderContext()
 {
@@ -42,9 +46,11 @@ void MyGLRenderContext::SetParamsInt(int paramType, int value)
             case SAMPLE_TYPE_KEY_TEXTURE_MAP:
                 m_Sample = new TextureSample();
                 break;
-            /*case SAMPLE_TYPE_KEY_YUV_TEXTURE_MAP:
-                m_Sample = new NV21TextureMapSample();
-                break;*/
+            case SAMPLE_TYPE_KEY_YUV_TEXTURE_MAP:
+                m_Sample = new NV21Sample();
+                break;
+            case SAMPLE_TYPE_KEY_VAO:
+                m_Sample = new VaoSample();
             default:
                 break;
         }

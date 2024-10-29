@@ -64,7 +64,6 @@ public class MyGLSurfaceView extends GLSurfaceView {
         public void onDrawFrame(GL10 gl) {
             Log.d(TAG, "onDrawFrame() called with: gl = [" + gl + "]");
             mNativeRender.native_OnDrawFrame();
-
         }
     }
 }

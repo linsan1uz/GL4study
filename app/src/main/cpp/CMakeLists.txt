@@ -34,6 +34,9 @@ add_library(native-render SHARED
         util/GLUtils.cpp
         sample/TriangleSample.cpp
         sample/TextureSample.cpp
+        sample/NV21Sample.cpp
+        sample/VaoSample.cpp
+        render/BgRender.cpp
 )
 # Specifies libraries CMake should link to your target library. You
 # can link libraries from various origins, such as libraries defined in this
